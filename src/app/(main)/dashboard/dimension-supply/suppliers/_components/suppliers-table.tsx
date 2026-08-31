@@ -104,7 +104,7 @@ export function SuppliersTable() {
       filters={filters}
       searchPlaceholder="Search suppliers..."
       getRowId={(row) => row.id}
-      onRowClick={(row) => router.push(`/dashboard/nexora-supply/suppliers/${row.id}`)}
+      onRowClick={(row) => router.push(`/dashboard/dimension-supply/suppliers/${row.id}`)}
       pageSize={12}
     />
   );

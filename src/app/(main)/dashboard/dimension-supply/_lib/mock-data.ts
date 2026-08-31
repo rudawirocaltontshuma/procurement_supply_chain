@@ -1,4 +1,4 @@
-// Deterministic mock data for the Nexora Supply procurement & supply chain module.
+// Deterministic mock data for the Dimension Supply procurement & supply chain module.
 // All data is generated client/server-shared from a seeded PRNG so it stays stable across renders.
 // This module has no backend, database, or network calls — everything lives in memory.
 
@@ -788,7 +788,7 @@ export const users: AppUser[] = Array.from({ length: 24 }, (_, i) => {
   return {
     id: id("USR", i + 1, 3),
     name: `${first} ${last}`,
-    email: `${first.toLowerCase()}.${last.toLowerCase()}@nexorasupply.com`,
+    email: `${first.toLowerCase()}.${last.toLowerCase()}@dimensionsupply.com`,
     role: pick(roles),
     department: pick(DEPARTMENTS),
     status: pick<AppUser["status"]>(["Active", "Active", "Active", "Invited", "Disabled"]),
