@@ -6,11 +6,11 @@ import { StatCard } from "./_components/stat-card";
 import { formatCurrency, formatNumber, formatPercent } from "./_lib/format";
 import { kpis, spendByCategory, spendTrend, supplierPerformanceTrend } from "./_lib/mock-data";
 
-export default function NexoraSupplyDashboardPage() {
+export default function DimensionSupplyDashboardPage() {
   return (
     <div className="flex flex-col gap-6">
       <PageHeader
-        title="Nexora Supply"
+        title="Dimension Supply"
         description="Procurement and supply chain overview across suppliers, orders, inventory, and spend."
       />
 

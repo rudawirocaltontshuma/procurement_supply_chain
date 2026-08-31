@@ -19,8 +19,8 @@ import { formatCurrency, initials } from "../../_lib/format";
 import { CATEGORIES, users } from "../../_lib/mock-data";
 
 export function SettingsPanels() {
-  const [orgName, setOrgName] = React.useState("Nexora Supply Co.");
-  const [orgDomain, setOrgDomain] = React.useState("nexorasupply.com");
+  const [orgName, setOrgName] = React.useState("Dimension Supply Co.");
+  const [orgDomain, setOrgDomain] = React.useState("dimensionsupply.com");
   const [notifications, setNotifications] = React.useState({
     approvalRequests: true,
     contractExpiry: true,
@@ -52,7 +52,7 @@ export function SettingsPanels() {
         <Card>
           <CardHeader>
             <CardTitle className="font-normal text-sm">Organization Profile</CardTitle>
-            <CardDescription>Basic details shown across the Nexora Supply workspace.</CardDescription>
+            <CardDescription>Basic details shown across the Dimension Supply workspace.</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-4 sm:max-w-md">
             <div className="flex flex-col gap-1.5">
@@ -156,7 +156,7 @@ export function SettingsPanels() {
         <Card>
           <CardHeader>
             <CardTitle className="font-normal text-sm">Workspace Users</CardTitle>
-            <CardDescription>People with access to Nexora Supply.</CardDescription>
+            <CardDescription>People with access to Dimension Supply.</CardDescription>
           </CardHeader>
           <CardContent className="overflow-x-auto px-0">
             <Table>
