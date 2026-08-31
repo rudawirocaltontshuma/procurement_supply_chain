@@ -25,7 +25,7 @@ Most admin templates I found, free or paid, felt cluttered, outdated, or too rig
 - Customizable theme presets (light/dark modes with color schemes like Tangerine, Brutalist, and more)  
 - Flexible layouts (collapsible sidebar, variable content widths)  
 - Authentication flows and screens  
-- Prebuilt dashboards (Default, Dimension Supply, CRM, Finance, Analytics, Productivity) plus legacy variants  
+- Dimension Supply: a full procurement & supply chain management dashboard  
 - Role-Based Access Control (RBAC) with config-driven UI and multi-tenant support *(planned)*  
 
 > [!NOTE]
@@ -58,29 +58,8 @@ Most admin templates I found, free or paid, felt cluttered, outdated, or too rig
 ## Screens
 
 ### Available
-- Default Dashboard  
-- Dimension Supply Dashboard (Procurement & Supply Chain Management)  
-- CRM Dashboard  
-- Finance Dashboard  
-- Analytics Dashboard  
-- Productivity Dashboard  
-- E-commerce Dashboard  
-- Academy Dashboard  
-- Logistics Dashboard  
-- Infrastructure Dashboard  
-- File Manager  
-- Patient Monitoring  
-- Chat Page  
-- Email Page  
-- Profile  
-- Users Management  
-- Roles Management  
-- Kanban Board  
-- Tasks Page  
-- Invoice Page  
-- Calendar Page  
-- Authentication (4 screens)  
-- Legacy: Default v1, CRM v1, Finance v1, Analytics v1
+- Dimension Supply Dashboard (Procurement & Supply Chain Management), including Suppliers, Purchase Requests, Purchase Orders, Approvals, Contracts, Products, Inventory, Warehouses, Receipts, Invoices, Spend, Sourcing, Analytics, Reports, and Settings  
+- Authentication (4 screens)
 
 ### Planned
 I’ve added all the planned screens. Feel free to open an issue for requesting something specific.
