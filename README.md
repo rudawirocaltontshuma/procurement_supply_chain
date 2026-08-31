@@ -25,7 +25,7 @@ Most admin templates I found, free or paid, felt cluttered, outdated, or too rig
 - Customizable theme presets (light/dark modes with color schemes like Tangerine, Brutalist, and more)  
 - Flexible layouts (collapsible sidebar, variable content widths)  
 - Authentication flows and screens  
-- Prebuilt dashboards (Default, CRM, Finance, Analytics, Productivity) plus legacy variants  
+- Prebuilt dashboards (Default, Dimension Supply, CRM, Finance, Analytics, Productivity) plus legacy variants  
 - Role-Based Access Control (RBAC) with config-driven UI and multi-tenant support *(planned)*  
 
 > [!NOTE]
@@ -59,6 +59,7 @@ Most admin templates I found, free or paid, felt cluttered, outdated, or too rig
 
 ### Available
 - Default Dashboard  
+- Dimension Supply Dashboard (Procurement & Supply Chain Management)  
 - CRM Dashboard  
 - Finance Dashboard  
 - Analytics Dashboard  
