@@ -1,101 +1,110 @@
-# Next.js Admin Template with TypeScript & Shadcn UI
+# Dimension Supply
 
-**Studio Admin** - Includes multiple dashboards, authentication layouts, customizable theme presets, and more.
+A procurement and supply chain management platform built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui.
 
-<img src="https://github.com/arhamkhnz/next-shadcn-admin-dashboard/blob/main/media/dashboard.png?version=5" alt="Dashboard Screenshot">
+Dimension Supply gives procurement and supply chain teams a single workspace to manage suppliers, purchase requests and orders, approvals, contracts, products, inventory, warehouses, receipts, invoices, spend, and sourcing — with dashboards and reports built on Recharts.
 
-Most admin templates I found, free or paid, felt cluttered, outdated, or too rigid. I built this as a cleaner alternative with features often missing in others, such as theme toggling and layout controls, while keeping the design modern, minimal, and flexible.
-
-> **View demo:** [studio admin](https://next-shadcn-admin-dashboard.vercel.app)
-
-> [!NOTE]
-> Looking for the Base UI version? Check out [next-shadcn-admin-dashboard-baseui](https://github.com/arhamkhnz/next-shadcn-admin-dashboard-baseui).
->
-> Looking for the React Aria version? Check out [arhamkhnz/next-shadcn-admin-dashboard-aria](https://github.com/arhamkhnz/next-shadcn-admin-dashboard-aria).
->
-> Looking for the TanStack Start version? Check out [tanstack-shadcn-admin-dashboard](https://github.com/arhamkhnz/tanstack-shadcn-admin-dashboard).
-
-> [!TIP]
-> I’m also working on Nuxt.js and Svelte versions of this dashboard. They’ll be live soon.
+This is a frontend application driven by deterministic, seeded mock data. There is no backend, database, authentication, or external integration — it is meant to be a realistic, fully interactive UI you can run, explore, and build on.
 
 ## Features
 
-- Built with Next.js 16, TypeScript, Tailwind CSS v4, and Shadcn UI  
-- Responsive and mobile-friendly  
-- Customizable theme presets (light/dark modes with color schemes like Tangerine, Brutalist, and more)  
-- Flexible layouts (collapsible sidebar, variable content widths)  
-- Authentication flows and screens  
-- Dimension Supply: a full procurement & supply chain management dashboard  
-- Role-Based Access Control (RBAC) with config-driven UI and multi-tenant support *(planned)*  
-
-> [!NOTE]
-> The default dashboard uses the **shadcn neutral** theme.  
-> It also includes additional color presets inspired by [Tweakcn](https://tweakcn.com):  
->
-> - Tangerine  
-> - Neo Brutalism  
-> - Soft Pop  
->
-> You can create more presets by following the same structure as the existing ones.
-
-> Looking for the **Next.js 15** version?  
-> Check out the [`archive/next15`](https://github.com/arhamkhnz/next-shadcn-admin-dashboard/tree/archive/next15) branch.  
-> This branch contains the setup prior to upgrading to Next 16 and the React Compiler.
-
-> Looking for the **Next.js 14 + Tailwind CSS v3** version?  
-> Check out the [`archive/next14-tailwindv3`](https://github.com/arhamkhnz/next-shadcn-admin-dashboard/tree/archive/next14-tailwindv3) branch.  
-> It has a different color theme and is not actively maintained, but I try to keep it updated with major changes.  
+- Built with Next.js 16, TypeScript, Tailwind CSS v4, and shadcn/ui
+- Responsive and mobile-friendly, with a collapsible sidebar and mobile navigation via Sheet
+- Customizable theme presets (light/dark modes with color schemes like Tangerine, Neo Brutalism, and Soft Pop)
+- Flexible layouts (collapsible sidebar, variable content widths)
+- Authentication screens (login/register, two visual variants)
+- A complete procurement and supply chain workflow: suppliers, purchase requests, purchase orders, approvals, contracts, products, inventory, warehouses, receipts, invoices, spend management, sourcing, analytics, reports, and settings
 
 ## Tech Stack
 
-- **Framework**: Next.js 16 (App Router), TypeScript, Tailwind CSS v4  
-- **UI Components**: Shadcn UI  
-- **Validation**: Zod  
-- **Forms & State Management**: React Hook Form, Zustand  
-- **Tables & Data Handling**: TanStack Table  
-- **Tooling & DX**: Biome, Husky  
+- **Framework**: Next.js 16 (App Router), TypeScript, Tailwind CSS v4
+- **UI Components**: shadcn/ui
+- **Charts**: Recharts
+- **Icons**: Lucide
+- **Validation**: Zod
+- **Forms & State Management**: React Hook Form, Zustand
+- **Tables & Data Handling**: TanStack Table
+- **Tooling & DX**: Biome, Husky
 
-## Screens
+## Modules
 
-### Available
-- Dimension Supply Dashboard (Procurement & Supply Chain Management), including Suppliers, Purchase Requests, Purchase Orders, Approvals, Contracts, Products, Inventory, Warehouses, Receipts, Invoices, Spend, Sourcing, Analytics, Reports, and Settings  
-- Authentication (4 screens)
+- **Dashboard** — KPIs and charts covering spend, purchase orders, supplier performance, and savings
+- **Suppliers** — directory and detail view (overview, contacts, purchase orders, invoices, contracts, performance, activity)
+- **Purchase Requests** — request tracking with priority and approval status
+- **Purchase Orders** — order lifecycle from draft through received
+- **Approvals** — approval queue with a timeline and temporary approve/reject actions
+- **Contracts** — contract lifecycle and expiry tracking
+- **Products** — product catalog with supplier and cost data
+- **Inventory** — stock levels by warehouse with reorder tracking
+- **Warehouses** — capacity and utilization overview
+- **Receipts** — goods-receipt tracking against purchase orders
+- **Invoices** — invoice status and due-date tracking
+- **Spend Management** — spend by department, category, and supplier against budget
+- **Sourcing** — sourcing event workspace (RFQ/RFP/RFI/auction)
+- **Analytics** — procurement, supplier, spend, inventory, and delivery analytics
+- **Reports** — spend, supplier, purchase order, invoice, contract, inventory, delivery, and savings reports
+- **Settings** — organization profile, notification preferences, approval thresholds, categories, and users
 
-### Planned
-I’ve added all the planned screens. Feel free to open an issue for requesting something specific.
+All data is generated locally from a seeded mock dataset. Actions such as approving a request or changing a status update local UI state only and do not persist.
 
 ## Colocation File System Architecture
 
-This project follows a **colocation-based architecture** each feature keeps its own pages, components, and logic inside its route folder.  
-Shared UI, hooks, and configuration live at the top level, making the codebase modular, scalable, and easier to maintain as the app grows.
+This project follows a **colocation-based architecture**: each route keeps its own pages, components, and logic inside its route folder. Shared UI, hooks, and configuration live at the top level.
 
-For a full breakdown of the structure with examples, see the [Next Colocation Template](https://github.com/arhamkhnz/next-colocation-template).
+```
+src
+├── app
+│   ├── (external)          # Public/root routes
+│   └── (main)
+│       ├── auth             # Login/register screens
+│       ├── dashboard
+│       │   ├── _components  # Shared sidebar, header, layout pieces
+│       │   └── dimension-supply
+│       │       ├── _lib          # Mock data and formatters
+│       │       ├── _components   # Shared table/card/chart components
+│       │       ├── suppliers
+│       │       ├── purchase-requests
+│       │       ├── purchase-orders
+│       │       ├── approvals
+│       │       ├── contracts
+│       │       ├── products
+│       │       ├── inventory
+│       │       ├── warehouses
+│       │       ├── receipts
+│       │       ├── invoices
+│       │       ├── spend
+│       │       ├── sourcing
+│       │       ├── analytics
+│       │       ├── reports
+│       │       └── settings
+│       └── unauthorized
+├── components               # Shared shadcn/ui components
+├── config                   # App-wide configuration
+├── data                     # Shared mock data (e.g. account users)
+├── hooks                    # Reusable hooks
+├── lib                      # Utilities, preferences, fonts
+├── navigation                # Sidebar navigation config
+├── stores                   # Zustand stores
+└── styles                   # Tailwind and theme setup
+```
 
 ## Getting Started
-
-You can run this project locally, or deploy it instantly with Vercel.
-
-### Deploy with Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Farhamkhnz%2Fnext-shadcn-admin-dashboard)
-
-_Deploy your own copy with one click._
 
 ### Run locally
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/arhamkhnz/next-shadcn-admin-dashboard.git
+   git clone https://github.com/rudawirocaltontshuma/procurement_supply_chain.git
    ```
-   
+
 2. **Navigate into the project**
    ```bash
-    cd next-shadcn-admin-dashboard
+   cd procurement_supply_chain
    ```
-   
+
 3. **Install dependencies**
    ```bash
-    npm install
+   npm install
    ```
 
 4. **Start the development server**
@@ -105,22 +114,25 @@ _Deploy your own copy with one click._
 
 Your app will be running at [http://localhost:3000](http://localhost:3000)
 
+### Production build
+
+```bash
+npm run build
+npm run start
+```
+
 ### Formatting and Linting
 
-Format, lint, and organize imports
+Format, lint, and organize imports:
 ```bash
-npx @biomejs/biome check --write
+npm run check:fix
 ```
 > For more information on available rules, fixes, and CLI options, refer to the [Biome documentation](https://biomejs.dev/).
 
----
+## Contributing
 
-> [!IMPORTANT]  
-> This project is updated frequently. If you’re working from a fork or an older clone, pull the latest changes before syncing. Some updates may include breaking changes.
+Contributions are welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) for how to get set up and where to make changes.
 
----
+## License
 
-Contributions are welcome. Feel free to open issues, feature requests, or start a discussion.
-
-
-**Happy Vibe Coding!**
+MIT — see [LICENSE](./LICENSE).
