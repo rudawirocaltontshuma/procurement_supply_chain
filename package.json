@@ -1,6 +1,9 @@
 {
-  "name": "studio-admin",
-  "version": "2.2.0",
+  "name": "dimension-supply",
+  "version": "1.0.0",
+  "description": "Dimension Supply - a procurement and supply chain management platform built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
+  "author": "rudawirocaltontshuma",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
