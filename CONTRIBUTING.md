@@ -25,6 +25,7 @@ src
 │   │       ├── crm
 │   │       ├── finance
 │   │       ├── default
+│   │       ├── dimension-supply
 │   │       └── ...
 │   └── layout.tsx
 ├── components        # Shared UI components
